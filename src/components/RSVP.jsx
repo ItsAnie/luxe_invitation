@@ -5,6 +5,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import angels from "../assets/angels.png"
 
 export default function RSVP({ weddingId, deadline }) {
   const [form, setForm] = useState({
@@ -62,7 +63,7 @@ export default function RSVP({ weddingId, deadline }) {
       <div className="mx-auto max-w-lg">
 
         {/* Decorative line */}
-        <div className="mb-6 flex items-center justify-center gap-4">
+        <div className="mb-12 flex items-center justify-center gap-4">
           <span className="h-px w-12 bg-[#6B2737]/30" />
 
           <span className="text-[12px] text-[#6B2737]">
@@ -90,7 +91,7 @@ export default function RSVP({ weddingId, deadline }) {
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="mt-8 space-y-9"
+          className="mt-10 space-y-9"
         >
 
           {/* Name */}
@@ -220,7 +221,7 @@ export default function RSVP({ weddingId, deadline }) {
           </span>
           <span className="h-px w-16 bg-[#6B2737]/20" />
         </div>
-
+        <img src={angels} className="mt-12" />
       </div>
     </section>
   );
