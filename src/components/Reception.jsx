@@ -23,66 +23,75 @@ export default function Reception({ event }) {
     return () => observer.disconnect();
   }, []);
 
+  const animation = (delay) =>
+    `transition-all duration-700 ${
+      isVisible
+        ? "translate-y-0 opacity-100"
+        : "translate-y-5 opacity-0"
+    }`;
+
   return (
     <section
       ref={sectionRef}
       className="bg-[#f5f1e9] px-7 py-14 text-center"
     >
-      <div className="mx-auto bg-[#6B2737] flex max-w-md flex-col items-center justify-center border-b border-[#b8b29f]/40 py-10 px-10">
+      <div className="mx-auto flex max-w-md flex-col items-center justify-center border-b border-[#b8b29f]/40 bg-[#6B2737] px-10 py-10">
+
+        {/* 1. Title */}
         <h2
-          className={`font-script text-[30px] italic text-white transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-5 opacity-0"
-          }`}
-          style={{ transitionDelay: "300ms" }}
+          className={`font-script text-[30px] italic text-white ${animation(
+            0
+          )}`}
+          style={{ transitionDelay: "200ms" }}
         >
           {event.title}
         </h2>
 
+        {/* 2. Venue */}
         <p
-          className={`text-sm font-serif mt-4 uppercase tracking-[0.16em] text-white transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-5 opacity-0"
-          }`}
-          style={{ transitionDelay: "900ms" }}
+          className={`mt-4 font-serif text-sm uppercase tracking-[0.16em] text-white ${animation(
+            0
+          )}`}
+          style={{ transitionDelay: "500ms" }}
         >
           {event.venue}
         </p>
 
+        {/* 3. Address */}
         <p
-          className={`mt-1 text-sm text-white font-serif transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-5 opacity-0"
-          }`}
-          style={{ transitionDelay: "1200ms" }}
+          className={`mt-1 font-serif text-sm text-white ${animation(0)}`}
+          style={{ transitionDelay: "800ms" }}
         >
           {event.address}
         </p>
+
+        {/* 4. Time */}
         <p
-          className={`font-serif text-white text-sm text-[#77786b] transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-5 opacity-0"
-          }`}
-          style={{ transitionDelay: "600ms" }}
+          className={`font-serif text-sm text-white ${animation(0)}`}
+          style={{ transitionDelay: "1100ms" }}
         >
           {event.time}
         </p>
 
-        <img src={table} className="h-[200px] w-full object-cover my-8" />
+        {/* 5. Image */}
+        <img
+          src={table}
+          alt=""
+          className={`my-8 h-[200px] w-full object-cover ${animation(0)}`}
+          style={{ transitionDelay: "1400ms" }}
+        />
 
-        <button className={`cursor-pointer border border-white rounded-xl py-2 px-4 text-white font-armenian font-light text-sm transition-all duration-700 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-5 opacity-0"
-            }`}
-            style={{ transitionDelay: "1500ms" }}>
+        {/* 6. Button */}
+        <button
+          className={`cursor-pointer rounded-xl border border-white px-4 py-2 font-armenian text-sm font-light text-white ${animation(
+            0
+          )}`}
+          style={{ transitionDelay: "1700ms" }}
+        >
           <a
             href={event.mapUrl}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Բացել քարտեզում
           </a>

@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import couple from "../assets/couple.png";
 import romanticSong from "../assets/Stephen Sanchez - Until I Found You.mp3";
-import music from "../assets/music.png";
 
 export default function Hero({ data }) {
   const [show, setShow] = useState(false);
@@ -68,7 +67,7 @@ export default function Hero({ data }) {
           </h1>
 
           <p
-            className={`mt-4 font-sans text-l tracking-[0.25em] transition-all duration-1000 ease-out delay-[1800ms] ${
+            className={`mt-4 font-sans text-l tracking-[0.25em] transition-all duration-1000 ease-out delay-[1000ms] ${
               show
                 ? "translate-y-0 opacity-100"
                 : "translate-y-5 opacity-0"

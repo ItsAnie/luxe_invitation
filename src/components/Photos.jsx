@@ -1,19 +1,42 @@
 import photo1 from "../assets/image2.jpg";
 import photo2 from "../assets/image.png";
 import photo3 from "../assets/image1.jpg";
+import message from "../assets/message.jpg";
 
 export default function Photos() {
-
   return (
     <section className="overflow-hidden">
-        <div className="flex justify-center w-full gap-5 px-12">
-            <h2 className="font-serif [writing-mode:vertical-rl] text-center text-[55px] font-light bg-black text-white py-3">We are waiting for you.</h2>
-            <div className="flex flex-col gap-5">
-                <img src={photo1} className="object-contain" />
-                <img src={photo2} className="object-contain" />
-                <img src={photo3} className="object-contain" />
-            </div>
+      <div className="flex w-full h-[800px] pr-9">
+        
+        {/* Ձախ նկար */}
+        <div className="w-1/2 h-full">
+          <img
+            src={message}
+            alt=""
+            className="w-full h-full object-contain"
+          />
         </div>
+
+        {/* Աջ նկարները */}
+        <div className="w-1/2 h-full flex flex-col gap-3">
+          <img
+            src={photo1}
+            alt=""
+            className="w-full h-full object-contain"
+          />
+          <img
+            src={photo2}
+            alt=""
+            className="w-full h-full object-contain"
+          />
+          <img
+            src={photo3}
+            alt=""
+            className="w-full h-full object-contain"
+          />
+        </div>
+
+      </div>
     </section>
   );
 }
