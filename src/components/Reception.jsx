@@ -35,7 +35,7 @@ export default function Reception({ event }) {
       ref={sectionRef}
       className="bg-[#f5f1e9] px-7 py-14 text-center"
     >
-      <div className="mx-auto flex max-w-md flex-col items-center justify-center border-b border-[#b8b29f]/40 bg-[#6B2737] px-10 py-10">
+      <div className="mx-auto flex max-w-md flex-col items-center justify-center bg-[#6B2737] px-10 py-10">
 
         {/* 1. Title */}
         <h2
