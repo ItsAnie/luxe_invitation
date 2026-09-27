@@ -7,7 +7,7 @@ export default function Photos() {
   return (
     <section className="overflow-hidden">
         <div className="flex justify-center w-full gap-5 px-12">
-            <h2 className="font-serif [writing-mode:vertical-rl] text-center sm:text-[70px] font-light bg-black text-white py-3">We are waiting for you.</h2>
+            <h2 className="font-serif [writing-mode:vertical-rl] text-center w-full h-full font-light bg-black text-white py-3">We are waiting for you.</h2>
             <div className="flex flex-col gap-5">
                 <img src={photo1} className="object-contain" />
                 <img src={photo2} className="object-contain" />
