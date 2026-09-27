@@ -29,7 +29,7 @@ export default function WeddingPlan({ data }) {
       ref={sectionRef}
       className="bg-[#f5f1e9] px-8 py-12"
     >
-      <div className="mx-auto bg-[#6B2737] text-white max-w-md py-9">
+      <div className="mx-auto max-w-md bg-[#6B2737] py-9 text-white">
         <div className="relative mx-auto max-w-md overflow-hidden bg-[#6B2737] px-8 text-white">
 
           {/* Decorative line */}
@@ -51,6 +51,13 @@ export default function WeddingPlan({ data }) {
               strokeWidth="1.5"
               strokeLinecap="round"
               opacity="0.8"
+              pathLength="1"
+              className="transition-all duration-[3000ms] ease-in-out"
+              style={{
+                strokeDasharray: 1,
+                strokeDashoffset: isVisible ? 0 : 1,
+                transitionDelay: "300ms",
+              }}
             />
           </svg>
 
@@ -59,7 +66,7 @@ export default function WeddingPlan({ data }) {
 
             {/* Title */}
             <h2
-              className={`text-start font-light font-script italic text-[30px] transition-all duration-1000 ease-out ${
+              className={`text-start font-script text-[30px] font-light italic transition-all duration-1000 ease-out ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0"
@@ -67,7 +74,6 @@ export default function WeddingPlan({ data }) {
             >
               {data.plan.title}
             </h2>
-
 
             {/* Bride */}
             <div
@@ -81,7 +87,8 @@ export default function WeddingPlan({ data }) {
               <div className="text-right font-light">
                 <p className="mt-1 font-serif">
                   {data.plan.bride.time}
-                </p>  
+                </p>
+
                 <h2 className="font-armenian">
                   {data.plan.bride.title}
                 </h2>
@@ -92,7 +99,6 @@ export default function WeddingPlan({ data }) {
               </div>
             </div>
 
-
             {/* Ceremony */}
             <div
               className={`flex min-h-[130px] items-start transition-all duration-1000 ease-out ${
@@ -102,7 +108,7 @@ export default function WeddingPlan({ data }) {
               }`}
               style={{ transitionDelay: "1900ms" }}
             >
-              <div className="text-left mt-3 font-light">
+              <div className="mt-3 text-left font-light">
                 <h2 className="font-armenian">
                   {data.ceremony.title}
                 </h2>
@@ -117,7 +123,6 @@ export default function WeddingPlan({ data }) {
               </div>
             </div>
 
-
             {/* Reception */}
             <div
               className={`flex min-h-[130px] justify-end transition-all duration-1000 ease-out ${
@@ -127,7 +132,7 @@ export default function WeddingPlan({ data }) {
               }`}
               style={{ transitionDelay: "2700ms" }}
             >
-              <div className="text-right mt-3 font-light">
+              <div className="mt-3 text-right font-light">
                 <h2 className="font-armenian">
                   {data.reception.venue}
                 </h2>
