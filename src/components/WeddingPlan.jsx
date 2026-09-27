@@ -109,13 +109,12 @@ export default function WeddingPlan({ data }) {
               style={{ transitionDelay: "1900ms" }}
             >
               <div className="mt-3 text-left font-light">
-                <h2 className="font-armenian">
-                  {data.ceremony.title}
-                </h2>
-
                 <p className="mt-1 font-serif">
                   {data.ceremony.time}
                 </p>
+                <h2 className="font-armenian">
+                  {data.ceremony.venue}
+                </h2>      
 
                 <p className="mt-1">
                   {data.ceremony.address}
@@ -133,13 +132,12 @@ export default function WeddingPlan({ data }) {
               style={{ transitionDelay: "2700ms" }}
             >
               <div className="mt-3 text-right font-light">
+                 <p className="mt-1 font-serif">
+                  {data.reception.time}
+                </p>
                 <h2 className="font-armenian">
                   {data.reception.venue}
                 </h2>
-
-                <p className="mt-1 font-serif">
-                  {data.reception.time}
-                </p>
 
                 <p className="mt-1">
                   {data.reception.address}
