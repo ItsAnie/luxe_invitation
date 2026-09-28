@@ -82,7 +82,7 @@ export default function Hero({ data }) {
           type="button"
           onClick={toggleMusic}
           aria-label={isPlaying ? "Pause music" : "Play music"}
-          className={`absolute left-0 top-1/3 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-r-xl bg-black/50 backdrop-blur-sm transition-all duration-1000 hover:bg-white/15 ${
+          className={`fixed top-1/3 left-0 bottom-5 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-r-xl bg-black/50 backdrop-blur-sm transition-all duration-1000 hover:bg-white/15 ${
             show ? "opacity-100" : "opacity-0"
           }`}
         >
