@@ -37,12 +37,7 @@ export default function Invitation({data, weddingId }) {
 
         <RSVP weddingId={weddingId} deadline={data.rsvpDeadline} />
 
-        <SharePhotos
-          onFilesSelected={(files) => {
-            console.log("Selected photos:", files);
-            // Այստեղ միացրու Firebase Storage-ի upload ֆունկցիան
-          }}
-        />
+        <SharePhotos />
 
         <Footer />
 
