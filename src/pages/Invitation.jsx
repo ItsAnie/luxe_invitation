@@ -10,6 +10,8 @@ import InvitationMessage from "../components/InvitationMessage";
 import RSVP from "../components/RSVP";
 import Footer from "../components/Footer";
 import Photos from "../components/Photos";
+import SharePhotos from "../components/SharePhotos";
+
 
 export default function Invitation({data, weddingId }) {
 
@@ -34,6 +36,13 @@ export default function Invitation({data, weddingId }) {
         <DressCode />
 
         <RSVP weddingId={weddingId} deadline={data.rsvpDeadline} />
+
+        <SharePhotos
+          onFilesSelected={(files) => {
+            console.log("Selected photos:", files);
+            // Այստեղ միացրու Firebase Storage-ի upload ֆունկցիան
+          }}
+        />
 
         <Footer />
 
